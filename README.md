@@ -1,4 +1,4 @@
-# BoardBond
+# KiAnchor
 
 Standalone Python tool to modify KiCad-exported PCB STEP assemblies for 3D printing.
 
@@ -47,9 +47,8 @@ pip install cadquery
 ### 3. Download the script
 Use the single file:
 
-- `boardbond_v2.py`
+- `KiAnchor.py`
 
-You can rename it to `boardbond.py` if you want.
 
 ## Launching
 
@@ -57,19 +56,19 @@ You can rename it to `boardbond.py` if you want.
 If you run the script with no arguments, it opens the GUI:
 
 ```bash
-python boardbond_v2.py
+python KiAnchor.py
 ```
 
 You can also force GUI mode:
 
 ```bash
-python boardbond_v2.py --gui
+python KiAnchor.py --gui
 ```
 
 ### CLI mode
 
 ```bash
-python boardbond_v2.py --input input.step --output output.step
+python KiAnchor.py --input input.step --output output.step
 ```
 
 ## GUI workflow
@@ -113,7 +112,7 @@ python boardbond_v2.py --input input.step --output output.step
 ### Basic export
 
 ```bash
-python boardbond_v2.py \
+python KiAnchor.py \
   --input SmartKnob.step \
   --output SmartKnob_anchored.step
 ```
@@ -121,7 +120,7 @@ python boardbond_v2.py \
 ### Require a single fused body
 
 ```bash
-python boardbond_v2.py \
+python KiAnchor.py \
   --input SmartKnob.step \
   --output SmartKnob_anchored.step \
   --export-mode onebody
@@ -130,7 +129,7 @@ python boardbond_v2.py \
 ### Force compound export
 
 ```bash
-python boardbond_v2.py \
+python KiAnchor.py \
   --input SmartKnob.step \
   --output SmartKnob_anchored.step \
   --export-mode compound
@@ -139,13 +138,13 @@ python boardbond_v2.py \
 ### List detected components without exporting
 
 ```bash
-python boardbond_v2.py --input SmartKnob.step --list-components
+python KiAnchor.py --input SmartKnob.step --list-components
 ```
 
 ### Disable components by solid index
 
 ```bash
-python boardbond_v2.py \
+python KiAnchor.py \
   --input SmartKnob.step \
   --output SmartKnob_anchored.step \
   --disable 3,7,12-18
@@ -253,7 +252,7 @@ Disabled components are excluded from the final output STEP.
 
 ```text
 BoardBond/
-├─ boardbond_v2.py
+├─ KiAnchor.py
 ├─ README.md
 └─ examples/
    ├─ input.step
