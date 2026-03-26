@@ -57,7 +57,7 @@ Then use the single script:
 
 - `KiAnchor.py`
 
-You can rename it to `KiAnchor.py` if you want.
+
 
 ### Option 2: Use the Windows `.exe`
 
